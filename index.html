@@ -151,7 +151,7 @@
               <p class="product-card-desc">Handwoven silk saree with gold zari border, ready to drape for celebratory evenings.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹6,499</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Emerald Silk Saree" data-price="6499" data-img="/img/category-ethnic-women.png" data-category="Women's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@
               <p class="product-card-desc">Classic Banarasi weave with intricate brocade detailing and timeless floral motifs.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹8,999</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Banarasi Silk Saree" data-price="8999" data-img="/img/category-ethnic-women.png" data-category="Women's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@
               <p class="product-card-desc">Festive silk kurta with pyjama, finished with custom metallic buttons.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹3,499</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Cream Silk Kurta Set" data-price="3499" data-img="/img/category-ethnic-men.png" data-category="Men's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@
               <p class="product-card-desc">Breathable linen wrap dress designed for all-day comfort and effortless styling.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹2,299</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Linen Wrap Dress" data-price="2299" data-img="/img/category-casual.png" data-category="Casual Wear" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@
               <p class="product-card-desc">Joyful kurta and pyjama set for little ones, woven from pure soft cotton.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹1,299</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Kids' Festive Set" data-price="1299" data-img="/img/category-kids.png" data-category="Kids' Wear" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@
               <p class="product-card-desc">Breathable tailored linen shirt in an easy-fitting, timeless silhouette.</p>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
                 <span class="product-card-price">₹1,799</span>
-                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+                <button class="btn-glass-primary buy-now-btn" data-name="Classic Linen Shirt" data-price="1799" data-img="/img/category-casual.png" data-category="Men's Casual" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
               </div>
             </div>
           </div>
@@ -288,7 +288,7 @@
         <div class="footer-section">
           <h3 class="footer-section-title">Visit Us</h3>
           <ul class="footer-links">
-            <li>Open daily, 8am – 10pm</li>
+            <li>Open daily, 10am – 8pm</li>
             <li>In-store & online orders</li>
             <li>Exchange & sizing support</li>
           </ul>
@@ -302,14 +302,123 @@
       </div>
       
       <div class="footer-copyright">
-        <p>&copy; 2026 Nandi Fashion. All rights reserved.</p>
+        <p>&copy; 2026 Nandi Fashion. All rights reserved. Crafted with Liquid Glass UI.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Razorpay Official Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Liquid Glass Checkout & Payment Modal -->
+  <div class="glass-modal-backdrop" id="checkoutModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="glass-modal" id="checkoutModal">
+      
+      <!-- Checkout Form View -->
+      <div id="checkoutFormView">
+        <div class="glass-modal-header">
+          <h3 class="glass-modal-title" id="checkoutModalTitle">Quick Checkout</h3>
+          <button class="glass-modal-close" id="modalCloseBtn" aria-label="Close Checkout">&times;</button>
+        </div>
+
+        <form class="glass-modal-body" id="checkoutForm" onsubmit="return false;">
+          <!-- Item Preview -->
+          <div class="checkout-item-preview">
+            <img src="/img/category-ethnic-women.png" alt="Selected Product" class="checkout-item-img" id="checkoutImg">
+            <div class="checkout-item-info">
+              <h4 class="checkout-item-name" id="checkoutName">Emerald Silk Saree</h4>
+              <p style="font-size: 0.78rem; color: var(--color-gold); font-weight: 600; text-transform: uppercase;" id="checkoutCategory">Women's Ethnic</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.2rem;">
+                <span class="checkout-item-price" id="checkoutPrice">₹6,499</span>
+                <span style="font-size: 0.78rem; color: var(--color-emerald); font-weight: 600; background: rgba(31,77,58,0.1); padding: 2px 8px; border-radius: 99px;">Free Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Details -->
+          <div class="glass-form-group">
+            <label for="custName">Full Name *</label>
+            <input type="text" id="custName" class="glass-input" placeholder="e.g. Ananya Sharma" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+            <div class="glass-form-group">
+              <label for="custPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="custPhone" class="glass-input" placeholder="e.g. 9876543210" required>
+            </div>
+            <div class="glass-form-group">
+              <label for="custEmail">Email Address *</label>
+              <input type="email" id="custEmail" class="glass-input" placeholder="e.g. name@example.com" required>
+            </div>
+          </div>
+
+          <div class="glass-form-group">
+            <label for="custAddress">Shipping Address *</label>
+            <textarea id="custAddress" class="glass-textarea" rows="2" placeholder="House no, Street, City, Pincode" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-glass-primary" id="payRazorpayBtn" style="width: 100%; padding: 0.95rem; font-size: 1rem; margin-top: 0.5rem;">
+            <span id="payBtnText">Pay with Razorpay (UPI / Card)</span>
+          </button>
+
+          <!-- Trust Badges -->
+          <div class="payment-trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Secured with Razorpay • UPI, Cards, NetBanking, GPay</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Payment Success View -->
+      <div id="checkoutSuccessView" style="display: none;">
+        <div class="order-success-card">
+          <div class="order-success-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="order-success-title">Order Confirmed!</h3>
+          <p class="order-success-text">Thank you for shopping with Nandi Fashion. Your garment is being prepared with care.</p>
+          
+          <div style="background: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.7); border-radius: 14px; padding: 1rem; margin-bottom: 1.5rem; text-align: left; font-size: 0.88rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+              <span style="color: var(--color-charcoal-muted);">Item:</span>
+              <strong id="successItemName" style="color: var(--color-emerald-dark);">-</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+              <span style="color: var(--color-charcoal-muted);">Amount Paid:</span>
+              <strong id="successAmount" style="color: var(--color-emerald);">-</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--color-charcoal-muted);">Payment ID:</span>
+              <span id="successPaymentId" style="font-family: monospace; font-size: 0.8rem; color: var(--color-charcoal);">-</span>
+            </div>
+          </div>
+
+          <button class="btn-glass-primary" id="continueShoppingBtn" style="padding: 0.75rem 2rem;">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
+    // =========================================================================
+    // RAZORPAY CONFIGURATION
+    // 1. Get your free Razorpay Key ID at: https://dashboard.razorpay.com/app/keys
+    // 2. Paste your Test Key (e.g. 'rzp_test_xxxxxxx') or Live Key below:
+    // =========================================================================
+    const RAZORPAY_KEY_ID = "rzp_test_YOUR_KEY_HERE";
+
     document.addEventListener('DOMContentLoaded', function() {
+      // 1. Mobile Menu Toggle
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.getElementById('navLinks');
       
@@ -321,7 +430,6 @@
           navToggle.setAttribute('aria-expanded', isOpened);
         });
 
-        // Close menu on link click
         navLinks.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => {
             navLinks.classList.remove('nav-open');
@@ -329,13 +437,153 @@
           });
         });
 
-        // Close on outside click
         document.addEventListener('click', function(e) {
           if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('nav-open');
             navToggle.setAttribute('aria-expanded', 'false');
           }
         });
+      }
+
+      // 2. Razorpay Checkout Modal Logic
+      const modalBackdrop = document.getElementById('checkoutModalBackdrop');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const checkoutForm = document.getElementById('checkoutForm');
+      const checkoutFormView = document.getElementById('checkoutFormView');
+      const checkoutSuccessView = document.getElementById('checkoutSuccessView');
+      const continueShoppingBtn = document.getElementById('continueShoppingBtn');
+      
+      const checkoutImg = document.getElementById('checkoutImg');
+      const checkoutName = document.getElementById('checkoutName');
+      const checkoutCategory = document.getElementById('checkoutCategory');
+      const checkoutPrice = document.getElementById('checkoutPrice');
+      const payBtnText = document.getElementById('payBtnText');
+
+      let currentProduct = {
+        name: "Emerald Silk Saree",
+        price: 6499,
+        img: "/img/category-ethnic-women.png",
+        category: "Women's Ethnic"
+      };
+
+      // Open Modal when any "Buy Now" button is clicked
+      document.querySelectorAll('.buy-now-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const name = this.dataset.name || "Nandi Fashion Piece";
+          const price = parseInt(this.dataset.price, 10) || 1999;
+          const img = this.dataset.img || "/img/hero-banner.png";
+          const category = this.dataset.category || "Collection";
+
+          currentProduct = { name, price, img, category };
+
+          checkoutName.textContent = name;
+          checkoutPrice.textContent = '₹' + price.toLocaleString('en-IN');
+          checkoutImg.src = img;
+          checkoutCategory.textContent = category;
+          payBtnText.textContent = `Pay ₹${price.toLocaleString('en-IN')} with Razorpay`;
+
+          checkoutFormView.style.display = 'block';
+          checkoutSuccessView.style.display = 'none';
+          modalBackdrop.classList.add('is-active');
+        });
+      });
+
+      // Close Modal
+      function closeModal() {
+        modalBackdrop.classList.remove('is-active');
+      }
+
+      modalCloseBtn.addEventListener('click', closeModal);
+      continueShoppingBtn.addEventListener('click', closeModal);
+      
+      modalBackdrop.addEventListener('click', function(e) {
+        if (e.target === modalBackdrop) {
+          closeModal();
+        }
+      });
+
+      // Escape key closes modal
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalBackdrop.classList.contains('is-active')) {
+          closeModal();
+        }
+      });
+
+      // Process Payment
+      checkoutForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const custName = document.getElementById('custName').value.trim();
+        const custPhone = document.getElementById('custPhone').value.trim();
+        const custEmail = document.getElementById('custEmail').value.trim();
+        const custAddress = document.getElementById('custAddress').value.trim();
+
+        if (!custName || !custPhone || !custEmail || !custAddress) {
+          alert('Please fill in all contact & shipping details.');
+          return;
+        }
+
+        // Check if user has provided their real Razorpay key
+        const isKeyConfigured = RAZORPAY_KEY_ID && !RAZORPAY_KEY_ID.includes("YOUR_KEY_HERE");
+
+        if (!isKeyConfigured) {
+          // Demo Mode Simulation
+          const demoPaymentId = "pay_demo_" + Math.random().toString(36).substring(2, 10).toUpperCase();
+          showSuccessScreen(currentProduct.name, currentProduct.price, demoPaymentId + " (Demo)");
+          return;
+        }
+
+        // Real Razorpay Checkout Options
+        const options = {
+          key: RAZORPAY_KEY_ID,
+          amount: currentProduct.price * 100, // Amount in paise (1 INR = 100 paise)
+          currency: "INR",
+          name: "Nandi Fashion",
+          description: currentProduct.name,
+          image: window.location.origin + "/favicon.ico",
+          prefill: {
+            name: custName,
+            email: custEmail,
+            contact: custPhone
+          },
+          notes: {
+            shipping_address: custAddress,
+            category: currentProduct.category
+          },
+          theme: {
+            color: "#1f4d3a" // Emerald brand color
+          },
+          handler: function(response) {
+            // Called upon successful payment
+            showSuccessScreen(currentProduct.name, currentProduct.price, response.razorpay_payment_id);
+          },
+          modal: {
+            ondismiss: function() {
+              console.log('Razorpay payment modal closed');
+            }
+          }
+        };
+
+        try {
+          const rzp = new Razorpay(options);
+          rzp.on('payment.failed', function(response) {
+            alert('Payment Failed: ' + (response.error.description || 'Unknown error. Please try again.'));
+          });
+          rzp.open();
+        } catch (err) {
+          console.error("Razorpay initialization error:", err);
+          alert("Could not initialize Razorpay. Please verify your RAZORPAY_KEY_ID in index.html.");
+        }
+      });
+
+      function showSuccessScreen(itemName, price, paymentId) {
+        document.getElementById('successItemName').textContent = itemName;
+        document.getElementById('successAmount').textContent = '₹' + price.toLocaleString('en-IN');
+        document.getElementById('successPaymentId').textContent = paymentId;
+
+        checkoutFormView.style.display = 'none';
+        checkoutSuccessView.style.display = 'block';
       }
     });
   </script>
