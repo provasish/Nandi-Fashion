@@ -933,3 +933,229 @@ ul, ol {
   background: rgba(31, 77, 58, 0.2);
   color: var(--color-emerald-dark);
 }
+
+/* --------------------------------------------------------------------------
+   14. Liquid Glass Checkout & Payment Modal
+   -------------------------------------------------------------------------- */
+.glass-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(18, 51, 36, 0.35);
+  backdrop-filter: blur(28px) saturate(1.8);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-modal-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.glass-modal {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(48px) saturate(2.2);
+  -webkit-backdrop-filter: blur(48px) saturate(2.2);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 28px;
+  box-shadow: 0 30px 80px -10px rgba(18, 51, 36, 0.3), var(--glass-inner-light);
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.92) translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-modal-backdrop.is-active .glass-modal {
+  transform: scale(1) translateY(0);
+}
+
+.glass-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-modal-header {
+  padding: 1.5rem 1.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.glass-modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-emerald-dark);
+}
+
+.glass-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal);
+  font-size: 1.25rem;
+  transition: var(--transition-fast);
+}
+
+.glass-modal-close:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: rotate(90deg);
+}
+
+.glass-modal-body {
+  padding: 1.5rem 1.75rem;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Order item preview */
+.checkout-item-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.checkout-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.checkout-item-info {
+  flex: 1;
+}
+
+.checkout-item-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-emerald-dark);
+  margin-bottom: 0.15rem;
+}
+
+.checkout-item-price {
+  font-weight: 700;
+  color: var(--color-emerald);
+  font-size: 1.1rem;
+}
+
+/* Form inputs with liquid glass styling */
+.glass-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.glass-form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-emerald-dark);
+}
+
+.glass-input, .glass-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  outline: none;
+  transition: var(--transition-fast);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.glass-input:focus, .glass-textarea:focus {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--color-emerald);
+  box-shadow: 0 0 0 3px rgba(31, 77, 58, 0.15);
+}
+
+.glass-input::placeholder, .glass-textarea::placeholder {
+  color: rgba(36, 31, 26, 0.45);
+}
+
+/* Payment gateway badge */
+.payment-trust-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-charcoal-muted);
+  padding: 0.5rem;
+}
+
+.payment-trust-badge svg {
+  color: var(--color-emerald);
+}
+
+/* Order Success State */
+.order-success-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.order-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(31, 77, 58, 0.15);
+  border: 2px solid var(--color-emerald);
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.order-success-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-emerald-dark);
+  margin-bottom: 0.5rem;
+}
+
+.order-success-text {
+  color: var(--color-charcoal-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
