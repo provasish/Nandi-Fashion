@@ -3,262 +3,545 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nandi Fashion — Crafted Elegance. Ethnic elegance, everyday casuals, and joyful kids' wear.">
-  <meta property="og:title" content="Nandi Fashion | Crafted Elegance">
-  <meta property="og:description" content="Ethnic elegance, everyday casuals, and joyful kids' wear — from our shop to your home.">
+  <meta name="description" content="Nandi Fashion — Buy Designer Ethnic Suits, Sarees, Kurtas & Co-ord Sets. Handcrafted ethnic wear for women, men, and kids. Free shipping & COD.">
+  <meta property="og:title" content="Nandi Fashion | Designer Ethnic Suits, Sarees & Kurtis">
+  <meta property="og:description" content="Explore Nandi Fashion's curated designer ethnic wear, handwoven sarees, and contemporary co-ords. Free shipping & COD across India.">
   <meta property="og:type" content="website">
-  <title>Nandi Fashion | Crafted Elegance</title>
+  <title>Nandi Fashion &ndash; Designer Ethnic Suits, Sarees &amp; Contemporary Wear</title>
   
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   
-  <!-- Fonts -->
+  <!-- Google Fonts: Source Serif 4 / Playfair Display & Inter / Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- Animated Liquid Ambient Background -->
+  <!-- Ambient Liquid Mesh Glow -->
   <div class="animated-bg">
     <div class="ambient-light ambient-light-1"></div>
     <div class="ambient-light ambient-light-2"></div>
-    <div class="ambient-light ambient-light-3"></div>
-    <div class="ambient-light ambient-light-4"></div>
   </div>
 
-  <!-- Header / Liquid Glass Nav -->
-  <header>
-    <nav class="glass-nav" aria-label="Main Navigation">
-      <div class="container">
-        <a href="#" class="nav-brand" aria-label="Nandi Fashion Home">
-          <span class="nav-brand-name">Nandi Fashion</span>
-          <span class="nav-brand-tagline">Crafted Elegance</span>
-        </a>
-        
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#featured">Featured</a></li>
-          <li><a href="#about">Our Story</a></li>
-        </ul>
-        
-        <div style="display: flex; align-items: center; gap: 0.85rem;">
-          <a href="#featured" class="nav-cta btn-glass-primary">Shop Now</a>
-          <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navLinks">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        </div>
+  <!-- Top Announcement Bar (Qurbat Ticker) -->
+  <aside class="top-bar" aria-label="Announcement">
+    <div class="top-bar-ticker">
+      <div class="top-bar-item">
+        <span>✨ Free Shipping on All Orders Across India</span>
+        <span class="divider">•</span>
       </div>
-    </nav>
+      <div class="top-bar-item">
+        <span>Cash on Delivery (COD) Available</span>
+        <span class="divider">•</span>
+      </div>
+      <div class="top-bar-item">
+        <span>Easy 7-Day Size Exchanges</span>
+        <span class="divider">•</span>
+      </div>
+      <div class="top-bar-item">
+        <span>Extra 10% Off on Prepaid Orders</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Luxury Sticky Glass Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-wrapper" aria-label="Nandi Fashion Home">
+        <span class="brand-logo">Nandi Fashion</span>
+        <span class="brand-subtitle">The Ethnic Atelier</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Menu">
+        <a href="#featured" class="nav-link">New In</a>
+        <a href="#categories" class="nav-link">Suit Sets</a>
+        <a href="#featured" class="nav-link">Sarees</a>
+        <a href="#featured" class="nav-link">Kurtas</a>
+        <a href="#categories" class="nav-link">Casuals</a>
+        <a href="#about" class="nav-link">Our Story</a>
+      </nav>
+
+      <!-- Header Action Icons -->
+      <div class="header-actions">
+        <!-- Wishlist -->
+        <a href="#featured" class="header-icon-btn" aria-label="Wishlist">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </a>
+
+        <!-- Cart / Bag -->
+        <button class="header-icon-btn" id="openCartBtn" aria-label="View Shopping Bag">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">1</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <a href="#featured">New In</a>
+      <a href="#categories">Suit Sets</a>
+      <a href="#featured">Sarees &amp; Ethnic</a>
+      <a href="#featured">Kurtas &amp; Kurtis</a>
+      <a href="#categories">Co-ord Sets</a>
+      <a href="#about">Our Story &amp; Stores</a>
+    </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-bg">
-        <img src="/img/hero-banner.png" alt="Nandi Fashion Boutique Banner">
-        <div class="hero-overlay"></div>
+    <!-- Qurbat-Style Circular Story Avatars -->
+    <section class="stories-section" id="categories" aria-label="Explore Categories">
+      <div class="stories-track">
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/category-ethnic-women.png" alt="Festive Suits">
+            </div>
+          </div>
+          <span class="story-title">Festive Suits</span>
+        </a>
+
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/category-ethnic-women.png" alt="Silk Sarees">
+            </div>
+          </div>
+          <span class="story-title">Silk Sarees</span>
+        </a>
+
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/category-ethnic-men.png" alt="Men's Kurtas">
+            </div>
+          </div>
+          <span class="story-title">Men's Sets</span>
+        </a>
+
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/category-casual.png" alt="Co-ord Sets">
+            </div>
+          </div>
+          <span class="story-title">Co-ords</span>
+        </a>
+
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/category-kids.png" alt="Kids' Festive">
+            </div>
+          </div>
+          <span class="story-title">Kids' Wear</span>
+        </a>
+
+        <a href="#featured" class="story-item">
+          <div class="story-avatar-ring">
+            <div class="story-avatar-inner">
+              <img src="/img/about-store.png" alt="Bestsellers">
+            </div>
+          </div>
+          <span class="story-title">Bestsellers</span>
+        </a>
       </div>
+    </section>
+
+    <!-- Editorial Hero Banner -->
+    <section class="hero-editorial">
+      <img src="/img/hero-banner.png" alt="Nandi Fashion Festive Collection" class="hero-editorial-img">
+      <div class="hero-editorial-overlay"></div>
       
-      <div class="container">
-        <div class="hero-content text-center">
-          <span class="hero-label">Now Open Online</span>
-          <h1 class="hero-title">Nandi Fashion</h1>
-          <p class="hero-subtitle">Ethnic elegance, everyday casuals, and joyful kids' wear — the same garments you love from our shop, now a click away.</p>
-          <div class="hero-actions">
-            <a href="#featured" class="btn-glass-primary">Shop the Collection</a>
-            <a href="#categories" class="btn-glass-outline">Explore Categories</a>
+      <div class="hero-editorial-content">
+        <div class="hero-editorial-card">
+          <span class="hero-editorial-tag">Festive Atelier 2026</span>
+          <h1 class="hero-editorial-title">Timeless Grace, Modern Silhouettes</h1>
+          <p class="hero-editorial-desc">Curated handwoven silk sarees, regal anarkalis, and tailored linen coordinates designed for life's most cherished occasions.</p>
+          <div class="hero-btn-group">
+            <a href="#featured" class="btn-primary-qurbat">Explore Collection</a>
+            <a href="#about" class="btn-outline-qurbat">Our Heritage</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="section" id="categories">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-label">Shop by Category</span>
-          <h2 class="section-title">Something for Everyone</h2>
+    <!-- USPs / Trust Strip (Qurbat Banner) -->
+    <section class="usp-section" aria-label="Brand USPs">
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h4 class="usp-title">Free Shipping</h4>
+            <p class="usp-sub">All prepaid orders across India</p>
+          </div>
         </div>
-        
-        <div class="grid-4">
-          <a href="#featured" class="glass-card category-card" aria-label="Women's Ethnic">
-            <div class="category-card-img">
-              <img src="/img/category-ethnic-women.png" alt="Women's Ethnic Wear" loading="lazy">
-            </div>
-            <div class="category-card-info">
-              <h3 class="category-card-title">Women's Ethnic</h3>
-              <p class="category-card-desc">Sarees, Anarkalis & festive silhouettes</p>
-            </div>
-          </a>
-          
-          <a href="#featured" class="glass-card category-card" aria-label="Men's Ethnic">
-            <div class="category-card-img">
-              <img src="/img/category-ethnic-men.png" alt="Men's Ethnic Wear" loading="lazy">
-            </div>
-            <div class="category-card-info">
-              <h3 class="category-card-title">Men's Ethnic</h3>
-              <p class="category-card-desc">Kurtas, bandhgalas & festive sets</p>
-            </div>
-          </a>
-          
-          <a href="#featured" class="glass-card category-card" aria-label="Casual Wear">
-            <div class="category-card-img">
-              <img src="/img/category-casual.png" alt="Casual Wear" loading="lazy">
-            </div>
-            <div class="category-card-info">
-              <h3 class="category-card-title">Casual Wear</h3>
-              <p class="category-card-desc">Everyday linen, cotton & knits</p>
-            </div>
-          </a>
-          
-          <a href="#featured" class="glass-card category-card" aria-label="Kids' Wear">
-            <div class="category-card-img">
-              <img src="/img/category-kids.png" alt="Kids' Wear" loading="lazy">
-            </div>
-            <div class="category-card-info">
-              <h3 class="category-card-title">Kids' Wear</h3>
-              <p class="category-card-desc">Festive and playful, made to last</p>
-            </div>
-          </a>
+
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <div>
+            <h4 class="usp-title">COD &amp; Instant UPI</h4>
+            <p class="usp-sub">Cash on delivery &amp; GPay ready</p>
+          </div>
+        </div>
+
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="usp-title">Easy 7-Day Exchange</h4>
+            <p class="usp-sub">Hassle-free size replacements</p>
+          </div>
+        </div>
+
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="usp-title">Artisan Quality</h4>
+            <p class="usp-sub">Authentic handloom craftsmanship</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Products Section -->
+    <!-- Bestsellers / Curated Product Collection -->
     <section class="section" id="featured">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-label">Handpicked</span>
-          <h2 class="section-title">Featured Pieces</h2>
+        <div class="qurbat-header">
+          <span class="qurbat-header-tag">Most Coveted</span>
+          <h2 class="qurbat-header-title">Bestselling Pieces</h2>
+          <div class="qurbat-header-divider"></div>
         </div>
-        
-        <div class="grid-3">
-          <!-- Card 1 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag card-badge-hot">Bestseller</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
               <img src="/img/category-ethnic-women.png" alt="Emerald Silk Saree" loading="lazy">
             </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Women's Ethnic</span>
-              <h3 class="product-card-name">Emerald Silk Saree</h3>
-              <p class="product-card-desc">Handwoven silk saree with gold zari border, ready to drape for celebratory evenings.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹6,499</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Emerald Silk Saree" data-price="6499" data-img="/img/category-ethnic-women.png" data-category="Women's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+            <div class="card-body">
+              <span class="card-meta-category">Women's Ethnic Wear</span>
+              <h3 class="card-title">Emerald Silk Saree with Gold Zari</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(142 reviews)</span>
               </div>
-            </div>
-          </div>
-          
-          <!-- Card 2 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
-              <img src="/img/category-ethnic-women.png" alt="Banarasi Silk Saree" loading="lazy">
-            </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Women's Ethnic</span>
-              <h3 class="product-card-name">Banarasi Silk Saree</h3>
-              <p class="product-card-desc">Classic Banarasi weave with intricate brocade detailing and timeless floral motifs.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹8,999</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Banarasi Silk Saree" data-price="8999" data-img="/img/category-ethnic-women.png" data-category="Women's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+              <div class="card-price-row">
+                <span class="price-current">₹6,499</span>
+                <span class="price-original">₹9,999</span>
+                <span class="price-discount-tag">35% OFF</span>
               </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Emerald Silk Saree with Gold Zari" 
+                      data-price="6499" 
+                      data-img="/img/category-ethnic-women.png" 
+                      data-category="Women's Ethnic">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
             </div>
-          </div>
-          
-          <!-- Card 3 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
+          </article>
+
+          <!-- Product 2 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag card-badge-new">New Arrival</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
+              <img src="/img/category-ethnic-women.png" alt="Banarasi Brocade Silk Saree" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-meta-category">Heritage Silk</span>
+              <h3 class="card-title">Banarasi Brocade Woven Saree</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(98 reviews)</span>
+              </div>
+              <div class="card-price-row">
+                <span class="price-current">₹8,999</span>
+                <span class="price-original">₹12,499</span>
+                <span class="price-discount-tag">28% OFF</span>
+              </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Banarasi Brocade Woven Saree" 
+                      data-price="8999" 
+                      data-img="/img/category-ethnic-women.png" 
+                      data-category="Heritage Silk">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag">Festive Favorite</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
               <img src="/img/category-ethnic-men.png" alt="Cream Silk Kurta Set" loading="lazy">
             </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Men's Ethnic</span>
-              <h3 class="product-card-name">Cream Silk Kurta Set</h3>
-              <p class="product-card-desc">Festive silk kurta with pyjama, finished with custom metallic buttons.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹3,499</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Cream Silk Kurta Set" data-price="3499" data-img="/img/category-ethnic-men.png" data-category="Men's Ethnic" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+            <div class="card-body">
+              <span class="card-meta-category">Men's Festive</span>
+              <h3 class="card-title">Cream Royal Silk Kurta &amp; Pyjama Set</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(76 reviews)</span>
               </div>
-            </div>
-          </div>
-          
-          <!-- Card 4 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
-              <img src="/img/category-casual.png" alt="Linen Wrap Dress" loading="lazy">
-            </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Casual Wear</span>
-              <h3 class="product-card-name">Linen Wrap Dress</h3>
-              <p class="product-card-desc">Breathable linen wrap dress designed for all-day comfort and effortless styling.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹2,299</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Linen Wrap Dress" data-price="2299" data-img="/img/category-casual.png" data-category="Casual Wear" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+              <div class="card-price-row">
+                <span class="price-current">₹3,499</span>
+                <span class="price-original">₹4,999</span>
+                <span class="price-discount-tag">30% OFF</span>
               </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Cream Royal Silk Kurta Set" 
+                      data-price="3499" 
+                      data-img="/img/category-ethnic-men.png" 
+                      data-category="Men's Festive">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
             </div>
-          </div>
-          
-          <!-- Card 5 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
-              <img src="/img/category-kids.png" alt="Kids' Ethnic Kurta Set" loading="lazy">
+          </article>
+
+          <!-- Product 4 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag card-badge-hot">Trending</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
+              <img src="/img/category-casual.png" alt="Pure Linen Wrap Dress" loading="lazy">
             </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Kids' Wear</span>
-              <h3 class="product-card-name">Kids' Festive Set</h3>
-              <p class="product-card-desc">Joyful kurta and pyjama set for little ones, woven from pure soft cotton.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹1,299</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Kids' Festive Set" data-price="1299" data-img="/img/category-kids.png" data-category="Kids' Wear" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+            <div class="card-body">
+              <span class="card-meta-category">Casual Co-ords</span>
+              <h3 class="card-title">Pure Breathable Linen Wrap Dress</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(115 reviews)</span>
               </div>
-            </div>
-          </div>
-          
-          <!-- Card 6 -->
-          <div class="glass-card product-card">
-            <div class="product-card-img">
-              <img src="/img/category-casual.png" alt="Classic Linen Shirt" loading="lazy">
-            </div>
-            <div class="product-card-info">
-              <span class="product-card-category">Men's Casual</span>
-              <h3 class="product-card-name">Classic Linen Shirt</h3>
-              <p class="product-card-desc">Breathable tailored linen shirt in an easy-fitting, timeless silhouette.</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
-                <span class="product-card-price">₹1,799</span>
-                <button class="btn-glass-primary buy-now-btn" data-name="Classic Linen Shirt" data-price="1799" data-img="/img/category-casual.png" data-category="Men's Casual" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy Now</button>
+              <div class="card-price-row">
+                <span class="price-current">₹2,299</span>
+                <span class="price-original">₹3,499</span>
+                <span class="price-discount-tag">34% OFF</span>
               </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Pure Linen Wrap Dress" 
+                      data-price="2299" 
+                      data-img="/img/category-casual.png" 
+                      data-category="Casual Co-ords">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
             </div>
-          </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag">Kids' Festive</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
+              <img src="/img/category-kids.png" alt="Kids' Festive Kurta Set" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-meta-category">Children's Collection</span>
+              <h3 class="card-title">Little Prince Cotton Kurta Set</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(64 reviews)</span>
+              </div>
+              <div class="card-price-row">
+                <span class="price-current">₹1,299</span>
+                <span class="price-original">₹1,899</span>
+                <span class="price-discount-tag">31% OFF</span>
+              </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Little Prince Cotton Kurta Set" 
+                      data-price="1299" 
+                      data-img="/img/category-kids.png" 
+                      data-category="Children's Collection">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="qurbat-card">
+            <span class="card-badge-tag card-badge-new">Classic</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrapper">
+              <img src="/img/category-casual.png" alt="Tailored Linen Shirt" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-meta-category">Men's Casuals</span>
+              <h3 class="card-title">Garment-Dyed Beige Linen Shirt</h3>
+              <div class="card-rating">
+                <span>★★★★★</span>
+                <span class="review-count">(89 reviews)</span>
+              </div>
+              <div class="card-price-row">
+                <span class="price-current">₹1,799</span>
+                <span class="price-original">₹2,599</span>
+                <span class="price-discount-tag">30% OFF</span>
+              </div>
+              <button class="card-buy-btn buy-now-btn" 
+                      data-name="Beige Tailored Linen Shirt" 
+                      data-price="1799" 
+                      data-img="/img/category-casual.png" 
+                      data-category="Men's Casuals">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Quick Buy
+              </button>
+            </div>
+          </article>
         </div>
-        
-        <div class="text-center" style="margin-top: 3.5rem;">
-          <a href="#" class="btn-glass-outline">View Full Collection</a>
+
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="#featured" class="btn-primary-qurbat" style="background: var(--color-charcoal);">View All Collections</a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about-section" id="about">
+    <!-- Editorial Story / Heritage Atelier (Qurbat Brand Story) -->
+    <section class="section heritage-section" id="about">
       <div class="container">
-        <div class="grid-2">
-          <div class="about-image glass-card" style="padding: 0.9rem;">
-            <img src="/img/about-store.png" alt="Nandi Fashion Boutique Interior" loading="lazy">
+        <div class="heritage-grid">
+          <div class="heritage-img-card">
+            <img src="/img/about-store.png" alt="Inside Nandi Fashion Atelier" loading="lazy">
           </div>
-          <div class="about-content">
-            <span class="about-label">Our Story</span>
-            <h2 class="about-title">From Our Shop to Your Home</h2>
-            <div class="about-text">
-              <p>Nandi Fashion has dressed families in ethnic, casual, and children's wear for years from our neighborhood store. Every piece we sell online is the same quality you'd hold in your hands in-store — chosen with care, fitted for real life.</p>
-              <p>We're proud to bring our heritage craft online, with seasonal arrivals, handwoven silks, and curated everyday essentials delivered straight to your doorstep.</p>
+          <div class="heritage-content">
+            <span class="heritage-tag">The Nandi Legacy</span>
+            <h2 class="heritage-title">From Our Neighborhood Shop to Your Wardrobe</h2>
+            <p class="heritage-desc">For years, Nandi Fashion has woven warmth, celebration, and tradition into the wardrobes of countless families. Every stitch, drape, and embroidery in our online boutique reflects the tactile perfection and honest craftsmanship our patrons cherish in our physical stores.</p>
+            <p class="heritage-desc">Whether it is the luster of handwoven Varanasi silk, the ease of breathable day linen, or the joyful playfulness of festive kids' attire, we ensure your purchase carries the authenticity of fine Indian design.</p>
+            <a href="#featured" class="btn-primary-qurbat">Shop Our Atelier</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews (Judge.me Style like Qurbat.in) -->
+    <section class="section" aria-label="Customer Reviews">
+      <div class="container">
+        <div class="qurbat-header">
+          <span class="qurbat-header-tag">Customer Love</span>
+          <h2 class="qurbat-header-title">Loved Across India</h2>
+          <div class="qurbat-header-divider"></div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-quote">"Exquisite Fabric &amp; Perfect Drape"</h4>
+            <p class="review-body">"I ordered the Emerald Silk Saree for my cousin's wedding. The zari work is even more breathtaking in person! The packaging was so royal. Truly reminiscent of a high-end designer atelier."</p>
+            <div class="review-author-row">
+              <span class="review-author-name">Ananya S., Delhi</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
             </div>
-            <div style="margin-top: 2rem;">
-              <a href="#featured" class="btn-glass-primary">Explore Products</a>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-quote">"Comfortable Yet So Regal"</h4>
+            <p class="review-body">"The men's silk kurta set fits like bespoke tailoring. Super breathable cotton lining inside the silk shell. Received compliments throughout Diwali evening. 10/10!"</p>
+            <div class="review-author-row">
+              <span class="review-author-name">Rohan M., Gurugram</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-quote">"Instant UPI &amp; Fast Delivery"</h4>
+            <p class="review-body">"Was hesitant to buy online, but the checkout was seamless and delivery arrived in 3 days in Mumbai. The linen wrap dress is now my go-to weekend outfit!"</p>
+            <div class="review-author-row">
+              <span class="review-author-name">Priyanka V., Mumbai</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
             </div>
           </div>
         </div>
@@ -266,43 +549,59 @@
     </section>
   </main>
 
-  <!-- Liquid Glass Footer -->
-  <footer class="glass-footer">
-    <div class="container">
-      <div class="grid-4">
-        <div>
-          <h2 class="footer-brand-name">Nandi Fashion</h2>
-          <p class="footer-brand-desc">Ethnic, casual, and kids' garments crafted with care — now online, from our shop to your doorstep.</p>
-        </div>
-        
-        <div class="footer-section">
-          <h3 class="footer-section-title">Shop</h3>
-          <ul class="footer-links">
-            <li><a href="#featured">All Products</a></li>
-            <li><a href="#categories">Women's Ethnic</a></li>
-            <li><a href="#categories">Men's Ethnic</a></li>
-            <li><a href="#categories">Casual & Kids</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3 class="footer-section-title">Visit Us</h3>
-          <ul class="footer-links">
-            <li>Open daily, 10am – 8pm</li>
-            <li>In-store & online orders</li>
-            <li>Exchange & sizing support</li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3 class="footer-section-title">Stay Connected</h3>
-          <p style="margin-bottom: 1rem;">Follow us for new festive arrivals, handcrafted sarees, and seasonal offers.</p>
-          <a href="#" class="btn-glass-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Contact Store</a>
-        </div>
+  <!-- Qurbat-Style Rich Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3 class="footer-brand-title">Nandi Fashion</h3>
+        <p class="footer-brand-text">Designer ethnic silhouettes, regal handwoven sarees, and contemporary everyday coordinates. Handcrafted with love from our store floor to your doorstep.</p>
+        <p style="font-size: 0.85rem; color: #b8aba0;">Flagship Store: Open Daily, 10:00 AM &ndash; 8:30 PM</p>
       </div>
-      
-      <div class="footer-copyright">
-        <p>&copy; 2026 Nandi Fashion. All rights reserved. Crafted with Liquid Glass UI.</p>
+
+      <div>
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-links-list">
+          <li><a href="#featured">Festive Suit Sets</a></li>
+          <li><a href="#featured">Banarasi Sarees</a></li>
+          <li><a href="#featured">Men's Kurtas</a></li>
+          <li><a href="#featured">Linen Co-ords</a></li>
+          <li><a href="#featured">Kids' Wear</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Customer Care</h4>
+        <ul class="footer-links-list">
+          <li><a href="#about">Track Your Order</a></li>
+          <li><a href="#about">Size Exchanges</a></li>
+          <li><a href="#about">Shipping Policy</a></li>
+          <li><a href="#about">Terms of Service</a></li>
+          <li><a href="#about">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Join The Nandi Circle</h4>
+        <p style="font-size: 0.88rem; color: #b8aba0; margin-bottom: 0.75rem;">Subscribe to receive private invitations to seasonal drops and festive collections.</p>
+        <form class="newsletter-input-group" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Nandi Fashion updates!');">
+          <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Nandi Fashion. All rights reserved.</p>
+        <div style="display: flex; gap: 1rem; font-size: 0.8rem; color: #b8aba0;">
+          <span>UPI / GPay</span>
+          <span>•</span>
+          <span>RuPay &amp; Cards</span>
+          <span>•</span>
+          <span>NetBanking</span>
+          <span>•</span>
+          <span>COD Available</span>
+        </div>
       </div>
     </div>
   </footer>
@@ -310,7 +609,7 @@
   <!-- Razorpay Official Checkout SDK -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-  <!-- Liquid Glass Checkout & Payment Modal -->
+  <!-- Liquid Glass Razorpay Checkout Modal -->
   <div class="glass-modal-backdrop" id="checkoutModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
     <div class="glass-modal" id="checkoutModal">
       
@@ -326,11 +625,11 @@
           <div class="checkout-item-preview">
             <img src="/img/category-ethnic-women.png" alt="Selected Product" class="checkout-item-img" id="checkoutImg">
             <div class="checkout-item-info">
-              <h4 class="checkout-item-name" id="checkoutName">Emerald Silk Saree</h4>
-              <p style="font-size: 0.78rem; color: var(--color-gold); font-weight: 600; text-transform: uppercase;" id="checkoutCategory">Women's Ethnic</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.2rem;">
+              <h4 class="checkout-item-name" id="checkoutName">Emerald Silk Saree with Gold Zari</h4>
+              <p style="font-size: 0.78rem; color: var(--color-terracotta); font-weight: 600; text-transform: uppercase;" id="checkoutCategory">Women's Ethnic</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.25rem;">
                 <span class="checkout-item-price" id="checkoutPrice">₹6,499</span>
-                <span style="font-size: 0.78rem; color: var(--color-emerald); font-weight: 600; background: rgba(31,77,58,0.1); padding: 2px 8px; border-radius: 99px;">Free Delivery</span>
+                <span style="font-size: 0.75rem; color: var(--color-emerald); font-weight: 700; background: var(--color-terracotta-light); padding: 2px 8px; border-radius: 99px;">Free Delivery</span>
               </div>
             </div>
           </div>
@@ -348,27 +647,27 @@
             </div>
             <div class="glass-form-group">
               <label for="custEmail">Email Address *</label>
-              <input type="email" id="custEmail" class="glass-input" placeholder="e.g. name@example.com" required>
+              <input type="email" id="custEmail" class="glass-input" placeholder="e.g. ananya@example.com" required>
             </div>
           </div>
 
           <div class="glass-form-group">
-            <label for="custAddress">Shipping Address *</label>
-            <textarea id="custAddress" class="glass-textarea" rows="2" placeholder="House no, Street, City, Pincode" required></textarea>
+            <label for="custAddress">Delivery Address *</label>
+            <textarea id="custAddress" class="glass-textarea" rows="2" placeholder="House/Flat No, Street, City, Pincode" required></textarea>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="btn-glass-primary" id="payRazorpayBtn" style="width: 100%; padding: 0.95rem; font-size: 1rem; margin-top: 0.5rem;">
+          <button type="submit" class="btn-primary-qurbat" id="payRazorpayBtn" style="width: 100%; padding: 0.95rem; font-size: 0.95rem; border: none; margin-top: 0.5rem;">
             <span id="payBtnText">Pay with Razorpay (UPI / Card)</span>
           </button>
 
           <!-- Trust Badges -->
-          <div class="payment-trust-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.78rem; color: var(--color-charcoal-light); margin-top: 0.25rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
-            <span>Secured with Razorpay • UPI, Cards, NetBanking, GPay</span>
+            <span>Secured with Razorpay &bull; UPI, GPay, PhonePe, Cards, NetBanking</span>
           </div>
         </form>
       </div>
@@ -382,24 +681,24 @@
             </svg>
           </div>
           <h3 class="order-success-title">Order Confirmed!</h3>
-          <p class="order-success-text">Thank you for shopping with Nandi Fashion. Your garment is being prepared with care.</p>
+          <p class="order-success-text">Thank you for shopping with Nandi Fashion. Your garment is being prepared with artisan care.</p>
           
-          <div style="background: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.7); border-radius: 14px; padding: 1rem; margin-bottom: 1.5rem; text-align: left; font-size: 0.88rem;">
+          <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: 14px; padding: 1.25rem; margin-bottom: 1.5rem; text-align: left; font-size: 0.88rem;">
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
-              <span style="color: var(--color-charcoal-muted);">Item:</span>
-              <strong id="successItemName" style="color: var(--color-emerald-dark);">-</strong>
+              <span style="color: var(--color-charcoal-light);">Garment:</span>
+              <strong id="successItemName" style="color: var(--color-charcoal);">-</strong>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
-              <span style="color: var(--color-charcoal-muted);">Amount Paid:</span>
-              <strong id="successAmount" style="color: var(--color-emerald);">-</strong>
+              <span style="color: var(--color-charcoal-light);">Amount Paid:</span>
+              <strong id="successAmount" style="color: var(--color-terracotta);">-</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span style="color: var(--color-charcoal-muted);">Payment ID:</span>
+              <span style="color: var(--color-charcoal-light);">Payment ID:</span>
               <span id="successPaymentId" style="font-family: monospace; font-size: 0.8rem; color: var(--color-charcoal);">-</span>
             </div>
           </div>
 
-          <button class="btn-glass-primary" id="continueShoppingBtn" style="padding: 0.75rem 2rem;">
+          <button class="btn-primary-qurbat" id="continueShoppingBtn" style="border: none; padding: 0.85rem 2.2rem;">
             Continue Shopping
           </button>
         </div>
@@ -408,44 +707,40 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- Interactive Logic -->
   <script>
     // =========================================================================
     // RAZORPAY CONFIGURATION
-    // 1. Get your free Razorpay Key ID at: https://dashboard.razorpay.com/app/keys
-    // 2. Paste your Test Key (e.g. 'rzp_test_xxxxxxx') or Live Key below:
+    // 1. Get your Razorpay Key ID at: https://dashboard.razorpay.com/app/keys
+    // 2. Paste your Test Key or Live Key below:
     // =========================================================================
     const RAZORPAY_KEY_ID = "rzp_test_YOUR_KEY_HERE";
 
     document.addEventListener('DOMContentLoaded', function() {
-      // 1. Mobile Menu Toggle
-      const navToggle = document.getElementById('navToggle');
-      const navLinks = document.getElementById('navLinks');
+      // 1. Mobile Menu Drawer Toggle
+      const navToggleBtn = document.getElementById('navToggleBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
       
-      if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function(e) {
+      if (navToggleBtn && mobileDrawer) {
+        navToggleBtn.addEventListener('click', function(e) {
           e.stopPropagation();
-          navLinks.classList.toggle('nav-open');
-          const isOpened = navLinks.classList.contains('nav-open');
-          navToggle.setAttribute('aria-expanded', isOpened);
+          mobileDrawer.classList.toggle('is-active');
         });
 
-        navLinks.querySelectorAll('a').forEach(link => {
+        mobileDrawer.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => {
-            navLinks.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
+            mobileDrawer.classList.remove('is-active');
           });
         });
 
         document.addEventListener('click', function(e) {
-          if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-            navLinks.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
+          if (!navToggleBtn.contains(e.target) && !mobileDrawer.contains(e.target)) {
+            mobileDrawer.classList.remove('is-active');
           }
         });
       }
 
-      // 2. Razorpay Checkout Modal Logic
+      // 2. Checkout Modal & Razorpay Integration
       const modalBackdrop = document.getElementById('checkoutModalBackdrop');
       const modalCloseBtn = document.getElementById('modalCloseBtn');
       const checkoutForm = document.getElementById('checkoutForm');
@@ -460,20 +755,20 @@
       const payBtnText = document.getElementById('payBtnText');
 
       let currentProduct = {
-        name: "Emerald Silk Saree",
+        name: "Emerald Silk Saree with Gold Zari",
         price: 6499,
         img: "/img/category-ethnic-women.png",
         category: "Women's Ethnic"
       };
 
-      // Open Modal when any "Buy Now" button is clicked
+      // Open Modal on "Quick Buy" click
       document.querySelectorAll('.buy-now-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
           e.preventDefault();
           const name = this.dataset.name || "Nandi Fashion Piece";
           const price = parseInt(this.dataset.price, 10) || 1999;
           const img = this.dataset.img || "/img/hero-banner.png";
-          const category = this.dataset.category || "Collection";
+          const category = this.dataset.category || "Ethnic Collection";
 
           currentProduct = { name, price, img, category };
 
@@ -489,6 +784,16 @@
         });
       });
 
+      // Also trigger checkout for header cart icon
+      const openCartBtn = document.getElementById('openCartBtn');
+      if (openCartBtn) {
+        openCartBtn.addEventListener('click', function() {
+          checkoutFormView.style.display = 'block';
+          checkoutSuccessView.style.display = 'none';
+          modalBackdrop.classList.add('is-active');
+        });
+      }
+
       // Close Modal
       function closeModal() {
         modalBackdrop.classList.remove('is-active');
@@ -498,19 +803,16 @@
       continueShoppingBtn.addEventListener('click', closeModal);
       
       modalBackdrop.addEventListener('click', function(e) {
-        if (e.target === modalBackdrop) {
-          closeModal();
-        }
+        if (e.target === modalBackdrop) closeModal();
       });
 
-      // Escape key closes modal
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modalBackdrop.classList.contains('is-active')) {
           closeModal();
         }
       });
 
-      // Process Payment
+      // Submit form & launch Razorpay
       checkoutForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -524,7 +826,6 @@
           return;
         }
 
-        // Check if user has provided their real Razorpay key
         const isKeyConfigured = RAZORPAY_KEY_ID && !RAZORPAY_KEY_ID.includes("YOUR_KEY_HERE");
 
         if (!isKeyConfigured) {
@@ -537,7 +838,7 @@
         // Real Razorpay Checkout Options
         const options = {
           key: RAZORPAY_KEY_ID,
-          amount: currentProduct.price * 100, // Amount in paise (1 INR = 100 paise)
+          amount: currentProduct.price * 100, // paise
           currency: "INR",
           name: "Nandi Fashion",
           description: currentProduct.name,
@@ -552,28 +853,22 @@
             category: currentProduct.category
           },
           theme: {
-            color: "#1f4d3a" // Emerald brand color
+            color: "#88472e" // Terracotta luxury accent
           },
           handler: function(response) {
-            // Called upon successful payment
             showSuccessScreen(currentProduct.name, currentProduct.price, response.razorpay_payment_id);
-          },
-          modal: {
-            ondismiss: function() {
-              console.log('Razorpay payment modal closed');
-            }
           }
         };
 
         try {
           const rzp = new Razorpay(options);
           rzp.on('payment.failed', function(response) {
-            alert('Payment Failed: ' + (response.error.description || 'Unknown error. Please try again.'));
+            alert('Payment Failed: ' + (response.error.description || 'Please try again.'));
           });
           rzp.open();
         } catch (err) {
-          console.error("Razorpay initialization error:", err);
-          alert("Could not initialize Razorpay. Please verify your RAZORPAY_KEY_ID in index.html.");
+          console.error("Razorpay Error:", err);
+          alert("Could not load Razorpay. Please verify your RAZORPAY_KEY_ID.");
         }
       });
 
