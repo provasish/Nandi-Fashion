@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nandi Fashion — Crafted Elegance. Ethnic elegance, everyday casuals, and joyful kids' wear.">
+  <meta property="og:title" content="Nandi Fashion | Crafted Elegance">
+  <meta property="og:description" content="Ethnic elegance, everyday casuals, and joyful kids' wear — from our shop to your home.">
+  <meta property="og:type" content="website">
+  <title>Nandi Fashion | Crafted Elegance</title>
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Animated Liquid Ambient Background -->
+  <div class="animated-bg">
+    <div class="ambient-light ambient-light-1"></div>
+    <div class="ambient-light ambient-light-2"></div>
+  </div>
+
+  <!-- Header / Liquid Glass Nav -->
+  <header>
+    <nav class="glass-nav" aria-label="Main Navigation">
+      <div class="container">
+        <a href="#" class="nav-brand" aria-label="Nandi Fashion Home">
+          <span class="nav-brand-name">Nandi Fashion</span>
+          <span class="nav-brand-tagline">Crafted Elegance</span>
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#about">Our Story</a></li>
+        </ul>
+        
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <a href="#featured" class="nav-cta btn-glass-primary">Shop Now</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navLinks">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="/img/hero-banner.png" alt="Nandi Fashion Boutique Banner">
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="container">
+        <div class="hero-content text-center">
+          <span class="hero-label">Now Open Online</span>
+          <h1 class="hero-title">Nandi Fashion</h1>
+          <p class="hero-subtitle">Ethnic elegance, everyday casuals, and joyful kids' wear — the same garments you love from our shop, now a click away.</p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn-glass-primary">Shop the Collection</a>
+            <a href="#categories" class="btn-glass-outline">Explore Categories</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-label">Shop by Category</span>
+          <h2 class="section-title">Something for Everyone</h2>
+        </div>
+        
+        <div class="grid-4">
+          <a href="#featured" class="glass-card category-card" aria-label="Women's Ethnic">
+            <div class="category-card-img">
+              <img src="/img/category-ethnic-women.png" alt="Women's Ethnic Wear" loading="lazy">
+            </div>
+            <div class="category-card-info">
+              <h3 class="category-card-title">Women's Ethnic</h3>
+              <p class="category-card-desc">Sarees, Anarkalis & festive silhouettes</p>
+            </div>
+          </a>
+          
+          <a href="#featured" class="glass-card category-card" aria-label="Men's Ethnic">
+            <div class="category-card-img">
+              <img src="/img/category-ethnic-men.png" alt="Men's Ethnic Wear" loading="lazy">
+            </div>
+            <div class="category-card-info">
+              <h3 class="category-card-title">Men's Ethnic</h3>
+              <p class="category-card-desc">Kurtas, bandhgalas & festive sets</p>
+            </div>
+          </a>
+          
+          <a href="#featured" class="glass-card category-card" aria-label="Casual Wear">
+            <div class="category-card-img">
+              <img src="/img/category-casual.png" alt="Casual Wear" loading="lazy">
+            </div>
+            <div class="category-card-info">
+              <h3 class="category-card-title">Casual Wear</h3>
+              <p class="category-card-desc">Everyday linen, cotton & knits</p>
+            </div>
+          </a>
+          
+          <a href="#featured" class="glass-card category-card" aria-label="Kids' Wear">
+            <div class="category-card-img">
+              <img src="/img/category-kids.png" alt="Kids' Wear" loading="lazy">
+            </div>
+            <div class="category-card-info">
+              <h3 class="category-card-title">Kids' Wear</h3>
+              <p class="category-card-desc">Festive and playful, made to last</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-label">Handpicked</span>
+          <h2 class="section-title">Featured Pieces</h2>
+        </div>
+        
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-ethnic-women.png" alt="Emerald Silk Saree" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Women's Ethnic</span>
+              <h3 class="product-card-name">Emerald Silk Saree</h3>
+              <p class="product-card-desc">Handwoven silk saree with gold zari border, ready to drape for celebratory evenings.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹6,499</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-ethnic-women.png" alt="Banarasi Silk Saree" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Women's Ethnic</span>
+              <h3 class="product-card-name">Banarasi Silk Saree</h3>
+              <p class="product-card-desc">Classic Banarasi weave with intricate brocade detailing and timeless floral motifs.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹8,999</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-ethnic-men.png" alt="Cream Silk Kurta Set" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Men's Ethnic</span>
+              <h3 class="product-card-name">Cream Silk Kurta Set</h3>
+              <p class="product-card-desc">Festive silk kurta with pyjama, finished with custom metallic buttons.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹3,499</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-casual.png" alt="Linen Wrap Dress" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Casual Wear</span>
+              <h3 class="product-card-name">Linen Wrap Dress</h3>
+              <p class="product-card-desc">Breathable linen wrap dress designed for all-day comfort and effortless styling.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹2,299</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-kids.png" alt="Kids' Ethnic Kurta Set" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Kids' Wear</span>
+              <h3 class="product-card-name">Kids' Festive Set</h3>
+              <p class="product-card-desc">Joyful kurta and pyjama set for little ones, woven from pure soft cotton.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹1,299</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="glass-card product-card">
+            <div class="product-card-img">
+              <img src="/img/category-casual.png" alt="Classic Linen Shirt" loading="lazy">
+            </div>
+            <div class="product-card-info">
+              <span class="product-card-category">Men's Casual</span>
+              <h3 class="product-card-name">Classic Linen Shirt</h3>
+              <p class="product-card-desc">Breathable tailored linen shirt in an easy-fitting, timeless silhouette.</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <span class="product-card-price">₹1,799</span>
+                <a href="#" class="btn-glass-primary" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 3.5rem;">
+          <a href="#" class="btn-glass-outline">View Full Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="grid-2">
+          <div class="about-image glass-card" style="padding: 0.9rem;">
+            <img src="/img/about-store.png" alt="Nandi Fashion Boutique Interior" loading="lazy">
+          </div>
+          <div class="about-content">
+            <span class="about-label">Our Story</span>
+            <h2 class="about-title">From Our Shop to Your Home</h2>
+            <div class="about-text">
+              <p>Nandi Fashion has dressed families in ethnic, casual, and children's wear for years from our neighborhood store. Every piece we sell online is the same quality you'd hold in your hands in-store — chosen with care, fitted for real life.</p>
+              <p>We're proud to bring our heritage craft online, with seasonal arrivals, handwoven silks, and curated everyday essentials delivered straight to your doorstep.</p>
+            </div>
+            <div style="margin-top: 2rem;">
+              <a href="#featured" class="btn-glass-primary">Explore Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Liquid Glass Footer -->
+  <footer class="glass-footer">
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <h2 class="footer-brand-name">Nandi Fashion</h2>
+          <p class="footer-brand-desc">Ethnic, casual, and kids' garments crafted with care — now online, from our shop to your doorstep.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-section-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="#featured">All Products</a></li>
+            <li><a href="#categories">Women's Ethnic</a></li>
+            <li><a href="#categories">Men's Ethnic</a></li>
+            <li><a href="#categories">Casual & Kids</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-section-title">Visit Us</h3>
+          <ul class="footer-links">
+            <li>Open daily, 10am – 8pm</li>
+            <li>In-store & online orders</li>
+            <li>Exchange & sizing support</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-section-title">Stay Connected</h3>
+          <p style="margin-bottom: 1rem;">Follow us for new festive arrivals, handcrafted sarees, and seasonal offers.</p>
+          <a href="#" class="btn-glass-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Contact Store</a>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; 2026 Nandi Fashion. All rights reserved. Crafted with Liquid Glass UI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navLinks.classList.toggle('nav-open');
+          const isOpened = navLinks.classList.contains('nav-open');
+          navToggle.setAttribute('aria-expanded', isOpened);
+        });
+
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+          if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
