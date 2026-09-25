@@ -68,7 +68,7 @@
   <header class="site-header">
     <div class="header-container">
       <a href="#" class="brand-wrapper" aria-label="Nandi Fashion Home">
-        <span class="brand-logo">Nandi Fashion</span>
+        <h1 class="brand-logo">Nandi Fashion</h1>
         <span class="brand-subtitle">The Ethnic Atelier</span>
       </a>
 
@@ -84,17 +84,18 @@
 
       <!-- Action Icons (Search, Wishlist, Theme Toggle, Cart & Mobile Toggle) -->
       <div class="header-actions">
-        <button class="header-icon-btn" aria-label="Search Catalog">
+        <button class="header-icon-btn" id="openSearchBtn" aria-label="Search Catalog" title="Search Catalog">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
 
-        <button class="header-icon-btn" aria-label="View Wishlist">
+        <button class="header-icon-btn" id="openWishlistBtn" aria-label="View Wishlist" title="View Wishlist" style="position: relative;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
           </svg>
+          <span class="wishlist-count" id="wishlistCount" style="display: none;">0</span>
         </button>
 
         <!-- Dark / Night Mode Toggle Button -->
@@ -457,6 +458,32 @@
       </div>
     </section>
 
+    <!-- Craftsmanship & Quality Assurance -->
+    <section class="craft-standards-section" aria-label="Our Craftsmanship Standards">
+      <div class="container">
+        <div class="craft-standards-grid">
+          <div class="craft-standard-card">
+            <div class="craft-standard-num">01</div>
+            <h3 class="craft-standard-title">100% Pure Handlooms</h3>
+            <p class="craft-standard-text">Woven on traditional pit and shuttle looms using genuine mulberry silk, pure cotton, and breathable linens.</p>
+          </div>
+          <div class="craft-standard-card">
+            <div class="craft-standard-num">02</div>
+            <h3 class="craft-standard-title">Eco-Botanical Dyes</h3>
+            <p class="craft-standard-text">Dyed with skin-friendly, gentle infusions ensuring lasting color depth and celebratory shine.</p>
+          </div>
+          <div class="craft-standard-card">
+            <div class="craft-standard-num">03</div>
+            <h3 class="craft-standard-title">Artisan Fair Wages</h3>
+            <p class="craft-standard-text">Direct collaboration with master craft clusters in Varanasi, Bengal, and Jaipur without middlemen.</p>
+          </div>
+          <div class="craft-standard-card">
+            <div class="craft-standard-num">04</div>
+            <h3 class="craft-standard-title">4-Point Quality Check</h3>
+            <p class="craft-standard-text">Every zari thread, hemline, and seam undergoes meticulous hand inspection before dispatch.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -607,6 +634,21 @@
               </div>
             </div>
 
+            <!-- Garment Size Selection -->
+            <div class="size-selector-wrap">
+              <div class="size-selector-label">
+                <span>Select Size / Fit</span>
+                <span id="selectedSizeLabel" style="color: var(--color-terracotta); text-transform: none; font-weight: 600;">Free Size / Standard</span>
+              </div>
+              <div class="size-pill-row" id="sizeSelectorRow">
+                <button type="button" class="size-pill active" data-size="Free Size / Standard">Free Size / Standard</button>
+                <button type="button" class="size-pill" data-size="S (38)">S (38)</button>
+                <button type="button" class="size-pill" data-size="M (40)">M (40)</button>
+                <button type="button" class="size-pill" data-size="L (42)">L (42)</button>
+                <button type="button" class="size-pill" data-size="XL (44)">XL (44)</button>
+              </div>
+            </div>
+
             <!-- Customer Details -->
             <div class="glass-form-group">
               <label for="custName">Full Name *</label>
@@ -685,6 +727,36 @@
     </div>
   </div>
 
+  <!-- Interactive Catalog Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Search Catalog">
+    <div class="search-modal">
+      <div class="search-input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-charcoal-muted);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="search-input" id="catalogSearchInput" placeholder="Search sarees, kurtas, linen dresses..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="searchResults">
+        <!-- Live populated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Luxury Floating Toast Notification -->
+  <div class="luxury-toast" id="luxuryToast" role="status" aria-live="polite">
+    <span class="toast-icon" id="toastIcon">✨</span>
+    <span class="toast-message" id="toastMessage">Added to Wishlist</span>
+  </div>
+
   <!-- Interactive Logic -->
   <script>
     // =========================================================================
@@ -755,7 +827,186 @@
         });
       }
 
-      // 2. Checkout Modal & Razorpay Integration
+      // 2. Sticky Header Scroll Effect & Back-to-Top Button
+      const siteHeader = document.querySelector('.site-header');
+      const backToTopBtn = document.getElementById('backToTopBtn');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 30) {
+          siteHeader.classList.add('is-scrolled');
+        } else {
+          siteHeader.classList.remove('is-scrolled');
+        }
+
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 3. Luxury Floating Toast Notification
+      const luxuryToast = document.getElementById('luxuryToast');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+      let toastTimeout;
+
+      function showToast(msg, icon = '✨') {
+        if (!luxuryToast) return;
+        toastMessage.textContent = msg;
+        toastIcon.textContent = icon;
+        luxuryToast.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          luxuryToast.classList.remove('show');
+        }, 3000);
+      }
+
+      // 4. Interactive Wishlist System
+      const wishlistCountEl = document.getElementById('wishlistCount');
+      const openWishlistBtn = document.getElementById('openWishlistBtn');
+      const wishlistItems = new Set();
+
+      function updateWishlistBadge() {
+        if (!wishlistCountEl) return;
+        if (wishlistItems.size > 0) {
+          wishlistCountEl.textContent = wishlistItems.size;
+          wishlistCountEl.style.display = 'flex';
+          wishlistCountEl.classList.add('pop');
+          setTimeout(() => wishlistCountEl.classList.remove('pop'), 300);
+        } else {
+          wishlistCountEl.style.display = 'none';
+        }
+      }
+
+      document.querySelectorAll('.wishlist-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const card = this.closest('.qurbat-card');
+          const buyBtn = card ? card.querySelector('.buy-now-btn') : null;
+          const name = buyBtn ? buyBtn.dataset.name : "Garment";
+
+          if (this.classList.contains('is-active')) {
+            this.classList.remove('is-active');
+            wishlistItems.delete(name);
+            showToast(`Removed from Wishlist`, '🤍');
+          } else {
+            this.classList.add('is-active');
+            wishlistItems.add(name);
+            showToast(`${name} saved to Wishlist`, '❤️');
+          }
+          updateWishlistBadge();
+        });
+      });
+
+      if (openWishlistBtn) {
+        openWishlistBtn.addEventListener('click', function() {
+          if (wishlistItems.size > 0) {
+            showToast(`${wishlistItems.size} piece(s) saved in your Wishlist`, '❤️');
+            const firstSaved = document.querySelector('.wishlist-btn.is-active');
+            if (firstSaved) {
+              firstSaved.closest('.qurbat-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            showToast('Your Wishlist is empty. Tap the heart on any piece to save it.', '🤍');
+          }
+        });
+      }
+
+      // 5. Garment Size / Variant Selector
+      let currentSelectedSize = "Free Size / Standard";
+      const selectedSizeLabel = document.getElementById('selectedSizeLabel');
+      const sizePills = document.querySelectorAll('#sizeSelectorRow .size-pill');
+
+      sizePills.forEach(pill => {
+        pill.addEventListener('click', function() {
+          sizePills.forEach(p => p.classList.remove('active'));
+          this.classList.add('active');
+          currentSelectedSize = this.dataset.size || this.textContent.trim();
+          if (selectedSizeLabel) selectedSizeLabel.textContent = currentSelectedSize;
+        });
+      });
+
+      // 6. Interactive Live Search Modal
+      const openSearchBtn = document.getElementById('openSearchBtn');
+      const searchModalBackdrop = document.getElementById('searchModalBackdrop');
+      const searchCloseBtn = document.getElementById('searchCloseBtn');
+      const catalogSearchInput = document.getElementById('catalogSearchInput');
+      const searchResults = document.getElementById('searchResults');
+
+      const catalogData = [
+        { name: "Emerald Silk Saree with Gold Zari Border", price: 6499, img: "img/category-ethnic-women.png", category: "Women's Ethnic" },
+        { name: "Banarasi Katan Silk Brocade Saree", price: 8999, img: "img/category-ethnic-women.png", category: "Heritage Weaves" },
+        { name: "Raw Silk Kurta & Churidar Set", price: 3499, img: "img/category-ethnic-men.png", category: "Men's Ethnic" },
+        { name: "Pure Linen Meadow Wrap Midi Dress", price: 2299, img: "img/category-casual.png", category: "Co-ords & Dresses" },
+        { name: "Kids' Gold-Embroidered Kurta Pyjama", price: 1299, img: "img/category-kids.png", category: "Kids' Wear" },
+        { name: "Garment-Dyed Beige Linen Shirt", price: 1799, img: "img/category-casual.png", category: "Men's Casuals" }
+      ];
+
+      function renderSearchResults(query = "") {
+        if (!searchResults) return;
+        searchResults.innerHTML = "";
+        const cleanQ = query.trim().toLowerCase();
+        const matches = cleanQ === ""
+          ? catalogData.slice(0, 4)
+          : catalogData.filter(p => p.name.toLowerCase().includes(cleanQ) || p.category.toLowerCase().includes(cleanQ));
+
+        if (matches.length === 0) {
+          searchResults.innerHTML = `<div style="padding: 1.5rem; text-align: center; color: var(--color-charcoal-muted); font-size: 0.9rem;">No matching garments found for "${query}"</div>`;
+          return;
+        }
+
+        matches.forEach(p => {
+          const item = document.createElement('a');
+          item.href = "#featured";
+          item.className = "search-result-item";
+          item.innerHTML = `
+            <img src="${p.img}" alt="${p.name}">
+            <div class="search-result-info">
+              <span class="search-result-name">${p.name}</span>
+              <span class="search-result-price">₹${p.price.toLocaleString('en-IN')} &bull; <small style="color: var(--color-charcoal-muted); font-weight: normal;">${p.category}</small></span>
+            </div>
+          `;
+          item.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchModalBackdrop.classList.remove('is-active');
+            openProductDetails(p.name, p.price, p.img, p.category);
+          });
+          searchResults.appendChild(item);
+        });
+      }
+
+      if (openSearchBtn && searchModalBackdrop) {
+        openSearchBtn.addEventListener('click', function() {
+          searchModalBackdrop.classList.add('is-active');
+          renderSearchResults("");
+          if (catalogSearchInput) {
+            setTimeout(() => catalogSearchInput.focus(), 150);
+          }
+        });
+
+        if (searchCloseBtn) {
+          searchCloseBtn.addEventListener('click', () => searchModalBackdrop.classList.remove('is-active'));
+        }
+
+        searchModalBackdrop.addEventListener('click', function(e) {
+          if (e.target === searchModalBackdrop) searchModalBackdrop.classList.remove('is-active');
+        });
+
+        if (catalogSearchInput) {
+          catalogSearchInput.addEventListener('input', function() {
+            renderSearchResults(this.value);
+          });
+        }
+      }
+
+      // 7. Checkout Modal & Razorpay Integration
       const modalBackdrop = document.getElementById('checkoutModalBackdrop');
       const modalCloseBtn = document.getElementById('modalCloseBtn');
       const checkoutForm = document.getElementById('checkoutForm');
@@ -836,8 +1087,11 @@
       });
 
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modalBackdrop.classList.contains('is-active')) {
-          closeModal();
+        if (e.key === 'Escape') {
+          if (modalBackdrop.classList.contains('is-active')) closeModal();
+          if (searchModalBackdrop && searchModalBackdrop.classList.contains('is-active')) {
+            searchModalBackdrop.classList.remove('is-active');
+          }
         }
       });
 
@@ -851,7 +1105,7 @@
         const custAddress = document.getElementById('custAddress').value.trim();
 
         if (!custName || !custPhone || !custEmail || !custAddress) {
-          alert('Please fill in all contact & shipping details.');
+          showToast('Please fill in all contact & shipping details.', '⚠️');
           return;
         }
 
@@ -860,7 +1114,7 @@
         if (!isKeyConfigured) {
           // Demo Mode Simulation
           const demoPaymentId = "pay_demo_" + Math.random().toString(36).substring(2, 10).toUpperCase();
-          showSuccessScreen(currentProduct.name, currentProduct.price, demoPaymentId + " (Demo)");
+          showSuccessScreen(currentProduct.name, currentProduct.price, demoPaymentId + " (Demo)", currentSelectedSize);
           return;
         }
 
@@ -870,7 +1124,7 @@
           amount: currentProduct.price * 100, // paise
           currency: "INR",
           name: "Nandi Fashion",
-          description: currentProduct.name,
+          description: `${currentProduct.name} (${currentSelectedSize})`,
           image: window.location.origin + "/favicon.ico",
           prefill: {
             name: custName,
@@ -879,30 +1133,31 @@
           },
           notes: {
             shipping_address: custAddress,
-            category: currentProduct.category
+            category: currentProduct.category,
+            selected_size: currentSelectedSize
           },
           theme: {
             color: "#88472e" // Terracotta luxury accent
           },
           handler: function(response) {
-            showSuccessScreen(currentProduct.name, currentProduct.price, response.razorpay_payment_id);
+            showSuccessScreen(currentProduct.name, currentProduct.price, response.razorpay_payment_id, currentSelectedSize);
           }
         };
 
         try {
           const rzp = new Razorpay(options);
           rzp.on('payment.failed', function(response) {
-            alert('Payment Failed: ' + (response.error.description || 'Please try again.'));
+            showToast('Payment Failed: ' + (response.error.description || 'Please try again.'), '❌');
           });
           rzp.open();
         } catch (err) {
           console.error("Razorpay Error:", err);
-          alert("Could not load Razorpay. Please verify your RAZORPAY_KEY_ID.");
+          showToast("Could not load Razorpay. Please verify your RAZORPAY_KEY_ID.", '❌');
         }
       });
 
-      function showSuccessScreen(itemName, price, paymentId) {
-        document.getElementById('successItemName').textContent = itemName;
+      function showSuccessScreen(itemName, price, paymentId, size = "Standard") {
+        document.getElementById('successItemName').textContent = `${itemName} (${size})`;
         document.getElementById('successAmount').textContent = '₹' + price.toLocaleString('en-IN');
         document.getElementById('successPaymentId').textContent = paymentId;
 
