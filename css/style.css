@@ -52,6 +52,41 @@
 }
 
 /* --------------------------------------------------------------------------
+   1b. Dark / Night Mode Tokens
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Qurbat Brand Palette — Night Mode */
+  --color-terracotta: #c96b4b;
+  --color-terracotta-dark: #df7e5d;
+  --color-terracotta-light: rgba(201, 107, 75, 0.2);
+  --color-emerald: #3fa37a;
+  --color-emerald-dark: #205c42;
+  --color-gold: #e2bd4b;
+  --color-gold-accent: #f8a703;
+  --color-badge-new: #49a594;
+  --color-cream: #12100e; /* Deep rich midnight atelier background */
+  --color-cream-warm: #181512;
+  --color-charcoal: #ede7e1; /* Soft glowing ivory text */
+  --color-charcoal-light: #b8aba0;
+  --color-charcoal-muted: #8c7e73;
+  --color-white: #1c1815; /* Card & surface backgrounds */
+  --color-border: #2e2622;
+  --color-border-dark: #4a3c36;
+  --color-footer-bg: #090807;
+
+  /* Subtle Liquid Glass Tokens in Dark/Night Mode */
+  --glass-bg: rgba(28, 24, 21, 0.72);
+  --glass-bg-hover: rgba(38, 32, 28, 0.88);
+  --glass-blur: blur(20px) saturate(1.8);
+  --glass-blur-header: blur(25px) saturate(1.8);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+  --glass-border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --glass-shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.7);
+  --glass-inner-light: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------------------------------------------
    2. Modern CSS Reset
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
@@ -328,6 +363,35 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Theme Toggle Button (Light / Night Mode Switch) */
+.theme-toggle-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(20deg) scale(1.08);
+}
+
+.theme-toggle-btn .sun-icon {
+  display: none;
+}
+
+.theme-toggle-btn .moon-icon {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-btn .sun-icon {
+  display: block;
+  color: var(--color-gold-accent);
+}
+
+[data-theme="dark"] .theme-toggle-btn .moon-icon {
+  display: none;
+}
+
 .cart-count {
   position: absolute;
   top: -2px;
@@ -390,6 +454,29 @@ img {
 
 .mobile-nav-drawer a:hover {
   color: var(--color-terracotta);
+}
+
+.mobile-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  background: rgba(136, 71, 46, 0.08);
+  border: 1px solid var(--color-border);
+  border-radius: var(--glass-radius-pill);
+  color: var(--color-charcoal);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: var(--transition-fast);
+}
+
+.mobile-theme-toggle:hover {
+  background: var(--color-terracotta);
+  color: var(--color-white);
 }
 
 /* --------------------------------------------------------------------------
@@ -1703,3 +1790,121 @@ img {
     gap: 1rem;
   }
 }
+
+/* ==========================================================================
+   17. Dark & Night Mode Specific Component Overrides
+   ========================================================================== */
+[data-theme="dark"] .animated-bg {
+  background: 
+    radial-gradient(circle at 12% 15%, rgba(226, 189, 75, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(201, 107, 75, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 75%, rgba(63, 163, 122, 0.07) 0%, transparent 55%),
+    linear-gradient(135deg, #0d0b0a 0%, #12100e 40%, #161311 70%, #0d0b0a 100%);
+}
+
+[data-theme="dark"] .ambient-light-1 {
+  background: radial-gradient(circle, rgba(201, 107, 75, 0.22) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .ambient-light-2 {
+  background: radial-gradient(circle, rgba(226, 189, 75, 0.18) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .site-header {
+  background: rgba(18, 16, 14, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .header-icon-btn,
+[data-theme="dark"] .nav-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-charcoal);
+}
+
+[data-theme="dark"] .header-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--color-gold);
+}
+
+[data-theme="dark"] .stories-section {
+  background: rgba(18, 16, 14, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .story-avatar-inner {
+  background: #1c1815;
+  border-color: #2e2622;
+}
+
+[data-theme="dark"] .usp-section {
+  background: #161311;
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .usp-icon {
+  background: rgba(201, 107, 75, 0.18);
+  color: var(--color-terracotta);
+}
+
+[data-theme="dark"] .card-img-wrapper {
+  background: #1e1916;
+}
+
+[data-theme="dark"] .wishlist-btn {
+  background: rgba(28, 24, 21, 0.85);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-charcoal);
+}
+
+[data-theme="dark"] .wishlist-btn:hover {
+  background: var(--color-white);
+  color: #ff5a6e;
+}
+
+[data-theme="dark"] .price-original {
+  color: #7b746f;
+}
+
+[data-theme="dark"] .heritage-img-card {
+  border-color: #28211d;
+}
+
+[data-theme="dark"] .review-card {
+  background: #181412;
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .review-author-row {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .glass-modal {
+  background: rgba(22, 19, 17, 0.95);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .checkout-item-preview,
+[data-theme="dark"] .glass-input,
+[data-theme="dark"] .glass-textarea,
+[data-theme="dark"] .order-success-card > div {
+  background: #181412;
+  border-color: var(--color-border);
+  color: var(--color-charcoal);
+}
+
+[data-theme="dark"] .glass-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-charcoal);
+}
+
+[data-theme="dark"] .mobile-nav-drawer {
+  background: rgba(18, 16, 14, 0.98);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .mobile-theme-toggle {
+  background: rgba(201, 107, 75, 0.15);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
