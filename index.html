@@ -525,118 +525,127 @@
     <div class="glass-modal" id="checkoutModal">
       
       <!-- Checkout Form View -->
-      <div id="checkoutFormView">
+      <div id="checkoutFormView" class="checkout-view-container">
         <div class="glass-modal-header">
-          <h3 class="glass-modal-title" id="checkoutModalTitle">Quick Checkout</h3>
+          <div>
+            <h3 class="glass-modal-title" id="checkoutModalTitle">Complete Order</h3>
+            <span style="font-size: 0.75rem; color: var(--color-charcoal-muted); letter-spacing: 0.03em;">Direct Artisan Checkout &bull; Free Express Delivery</span>
+          </div>
           <button class="glass-modal-close" id="modalCloseBtn" aria-label="Close Checkout">&times;</button>
         </div>
 
-        <form class="glass-modal-body" id="checkoutForm" onsubmit="return false;">
-          <!-- Item Preview -->
-          <div class="checkout-item-preview">
-            <img src="img/category-ethnic-women.png" alt="Selected Product" class="checkout-item-img" id="checkoutImg">
-            <div class="checkout-item-info">
-              <h4 class="checkout-item-name" id="checkoutName">Emerald Silk Saree with Gold Zari</h4>
-              <p style="font-size: 0.78rem; color: var(--color-terracotta); font-weight: 600; text-transform: uppercase;" id="checkoutCategory">Women's Ethnic</p>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.25rem;">
-                <span class="checkout-item-price" id="checkoutPrice">₹6,499</span>
-                <span style="font-size: 0.75rem; color: var(--color-emerald); font-weight: 700; background: var(--color-terracotta-light); padding: 2px 8px; border-radius: 99px;">Free Delivery</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product Guarantees & Trust Badges (Moved inside product) -->
-          <div class="product-modal-usps" aria-label="Product Guarantees">
-            <div class="product-usp-item">
-              <div class="product-usp-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="1" y="3" width="15" height="13"></rect>
-                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                </svg>
-              </div>
-              <div class="product-usp-text">
-                <strong>Free Shipping</strong>
-                <span>All prepaid &amp; COD orders across India</span>
+        <form class="glass-modal-form" id="checkoutForm" onsubmit="return false;">
+          <div class="glass-modal-body">
+            <!-- Item Preview -->
+            <div class="checkout-item-preview">
+              <img src="img/category-ethnic-women.png" alt="Selected Product" class="checkout-item-img" id="checkoutImg">
+              <div class="checkout-item-info">
+                <h4 class="checkout-item-name" id="checkoutName">Emerald Silk Saree with Gold Zari</h4>
+                <p style="font-size: 0.78rem; color: var(--color-terracotta); font-weight: 600; text-transform: uppercase;" id="checkoutCategory">Women's Ethnic</p>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.25rem;">
+                  <span class="checkout-item-price" id="checkoutPrice">₹6,499</span>
+                  <span style="font-size: 0.75rem; color: var(--color-emerald); font-weight: 700; background: var(--color-terracotta-light); padding: 2px 8px; border-radius: 99px;">Free Delivery</span>
+                </div>
               </div>
             </div>
 
-            <div class="product-usp-item">
-              <div class="product-usp-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
+            <!-- Product Guarantees & Trust Badges (Moved inside product) -->
+            <div class="product-modal-usps" aria-label="Product Guarantees">
+              <div class="product-usp-item">
+                <div class="product-usp-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                  </svg>
+                </div>
+                <div class="product-usp-text">
+                  <strong>Free Shipping</strong>
+                  <span>All prepaid &amp; COD orders across India</span>
+                </div>
               </div>
-              <div class="product-usp-text">
-                <strong>Authentic Craft</strong>
-                <span>100% handloom certified weaves</span>
+
+              <div class="product-usp-item">
+                <div class="product-usp-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                </div>
+                <div class="product-usp-text">
+                  <strong>Authentic Craft</strong>
+                  <span>100% handloom certified weaves</span>
+                </div>
+              </div>
+
+              <div class="product-usp-item">
+                <div class="product-usp-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                  </svg>
+                </div>
+                <div class="product-usp-text">
+                  <strong>7-Day Exchanges</strong>
+                  <span>Hassle-free doorstep pickup</span>
+                </div>
+              </div>
+
+              <div class="product-usp-item">
+                <div class="product-usp-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="product-usp-text">
+                  <strong>COD Available</strong>
+                  <span>Pay at doorstep or via UPI</span>
+                </div>
               </div>
             </div>
 
-            <div class="product-usp-item">
-              <div class="product-usp-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="23 4 23 10 17 10"></polyline>
-                  <polyline points="1 20 1 14 7 14"></polyline>
-                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-                </svg>
-              </div>
-              <div class="product-usp-text">
-                <strong>7-Day Exchanges</strong>
-                <span>Hassle-free doorstep pickup</span>
-              </div>
-            </div>
-
-            <div class="product-usp-item">
-              <div class="product-usp-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                  <line x1="12" y1="8" x2="12" y2="16"></line>
-                  <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-              </div>
-              <div class="product-usp-text">
-                <strong>COD Available</strong>
-                <span>Pay at doorstep or via UPI</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Customer Details -->
-          <div class="glass-form-group">
-            <label for="custName">Full Name *</label>
-            <input type="text" id="custName" class="glass-input" placeholder="e.g. Ananya Sharma" required>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+            <!-- Customer Details -->
             <div class="glass-form-group">
-              <label for="custPhone">Phone / WhatsApp *</label>
-              <input type="tel" id="custPhone" class="glass-input" placeholder="e.g. 9876543210" required>
+              <label for="custName">Full Name *</label>
+              <input type="text" id="custName" class="glass-input" placeholder="e.g. Ananya Sharma" required>
             </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+              <div class="glass-form-group">
+                <label for="custPhone">Phone / WhatsApp *</label>
+                <input type="tel" id="custPhone" class="glass-input" placeholder="e.g. 9876543210" required>
+              </div>
+              <div class="glass-form-group">
+                <label for="custEmail">Email Address *</label>
+                <input type="email" id="custEmail" class="glass-input" placeholder="e.g. ananya@example.com" required>
+              </div>
+            </div>
+
             <div class="glass-form-group">
-              <label for="custEmail">Email Address *</label>
-              <input type="email" id="custEmail" class="glass-input" placeholder="e.g. ananya@example.com" required>
+              <label for="custAddress">Delivery Address *</label>
+              <textarea id="custAddress" class="glass-textarea" rows="2" placeholder="House/Flat No, Street, City, Pincode" required></textarea>
             </div>
           </div>
 
-          <div class="glass-form-group">
-            <label for="custAddress">Delivery Address *</label>
-            <textarea id="custAddress" class="glass-textarea" rows="2" placeholder="House/Flat No, Street, City, Pincode" required></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" class="btn-primary-qurbat" id="payRazorpayBtn" style="width: 100%; padding: 0.95rem; font-size: 0.95rem; margin-top: 0.5rem;">
-            <span id="payBtnText">Pay with Razorpay (UPI / Card)</span>
-          </button>
-
-          <!-- Trust Badges -->
-          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.78rem; color: var(--color-charcoal-light); margin-top: 0.25rem;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span>Secured with Razorpay &bull; UPI, GPay, PhonePe, Cards, NetBanking</span>
+          <!-- Pinned Bottom Buy Now Action Bar -->
+          <div class="glass-modal-footer">
+            <button type="submit" class="btn-primary-qurbat modal-buy-btn" id="payRazorpayBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+              <span id="payBtnText">Buy Now &bull; Pay ₹6,499</span>
+            </button>
+            <div class="modal-secure-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Instant UPI (GPay, PhonePe, Paytm) &bull; Cards &bull; COD Available</span>
+            </div>
           </div>
         </form>
       </div>
@@ -774,9 +783,9 @@
         checkoutPrice.textContent = '₹' + price.toLocaleString('en-IN');
         checkoutImg.src = img;
         checkoutCategory.textContent = category;
-        payBtnText.textContent = `Pay ₹${price.toLocaleString('en-IN')} with Razorpay`;
+        payBtnText.textContent = `Buy Now • Pay ₹${price.toLocaleString('en-IN')}`;
 
-        checkoutFormView.style.display = 'block';
+        checkoutFormView.style.display = 'flex';
         checkoutSuccessView.style.display = 'none';
         modalBackdrop.classList.add('is-active');
       }
@@ -804,7 +813,7 @@
       const openCartBtn = document.getElementById('openCartBtn');
       if (openCartBtn) {
         openCartBtn.addEventListener('click', function() {
-          checkoutFormView.style.display = 'block';
+          checkoutFormView.style.display = 'flex';
           checkoutSuccessView.style.display = 'none';
           modalBackdrop.classList.add('is-active');
         });
@@ -813,6 +822,10 @@
       // Close Modal
       function closeModal() {
         modalBackdrop.classList.remove('is-active');
+        setTimeout(() => {
+          checkoutFormView.style.display = 'flex';
+          checkoutSuccessView.style.display = 'none';
+        }, 350);
       }
 
       modalCloseBtn.addEventListener('click', closeModal);
