@@ -1355,6 +1355,53 @@ img {
   font-size: 1.1rem;
 }
 
+/* Product Modal USPs (Trust Badges inside Product Drawer) */
+.product-modal-usps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  padding: 0.85rem;
+  background: rgba(136, 71, 46, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.product-usp-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.product-usp-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-terracotta-light);
+  color: var(--color-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-usp-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-usp-text strong {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  line-height: 1.25;
+}
+
+.product-usp-text span {
+  font-size: 0.68rem;
+  color: var(--color-charcoal-light);
+  line-height: 1.2;
+}
+
 .glass-form-group {
   display: flex;
   flex-direction: column;
@@ -1812,5 +1859,15 @@ img {
 [data-theme="dark"] .mobile-theme-toggle {
   background: rgba(201, 107, 75, 0.15);
   border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .product-modal-usps {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .product-usp-icon {
+  background: rgba(201, 107, 75, 0.18);
+  color: var(--color-terracotta);
 }
 
